@@ -1,0 +1,27 @@
+<project name="Hello" default="kranti3">
+	<property name="reddy" value="KKR">
+	</property>
+	
+	<property name="reddy" value="DDR">
+	</property>
+	<target name="kranti1" >
+
+		<echo> Hello Kranti1 ${reddy}</echo>
+
+	</target>
+
+	<target name="kranti2"  depends="kranti1">
+
+		<echo> Hello Kranti2 ${reddy}</echo>
+
+	</target>	
+	
+	<target name="kranti3" depends="kranti1,kranti2">
+
+		<echo> Hello Kranti3 ${reddy}</echo>
+		<echo> Hello Kranti4 ${reddy}</echo>
+		
+	</target>
+	
+
+</project>
